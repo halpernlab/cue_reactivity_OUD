@@ -12,14 +12,14 @@ on_save = 'true';
 mkdir(sprintf('figures/%s',target));
 save_dir = sprintf('figures/%s',target);
 %% load data
-onstim_1 = load('../patient_result/result_01102024_2.mat');
-onstim_2 = load('../patient_result/result_01112024_1.mat');
-offstim_1 = load('../patient_result/result_01052024_1.mat');
-offstim_2 = load('../patient_result/result_01052024_2.mat');
-offstim_3 = load('../patient_result/result_01102024_1.mat');
-on_1 = load('../matfiles/01102024_2.mat');
-on_2 = load('../matfiles/01112024_1.mat');
-off_merge = load('../matfiles//merge_off.mat');
+onstim_1 = load('/patient_result/result_01102024_2.mat');
+onstim_2 = load('/patient_result/result_01112024_1.mat');
+offstim_1 = load('/patient_result/result_01052024_1.mat');
+offstim_2 = load('/patient_result/result_01052024_2.mat');
+offstim_3 = load('/patient_result/result_01102024_1.mat');
+on_1 = load('/matfiles/01102024_2.mat');
+on_2 = load('/matfiles/01112024_1.mat');
+off_merge = load('/matfiles//merge_off.mat');
 %% barplot for behavioral data
 offstim_trial = [offstim_1.trial_img; offstim_2.trial_img; offstim_3.trial_img];
 offstim_rating = [offstim_1.trial_rating; offstim_2.trial_rating; offstim_3.trial_rating];
@@ -244,3 +244,4 @@ for pp=1:length(psig)
 end
 
 legend('','w/o stim','','with stim');
+
